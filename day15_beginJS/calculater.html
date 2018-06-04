@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <input id="second-number" type="number" value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <script>
+        {   
+            
+            var result = document.getElementById("result");
+            var btnAdd = document.getElementById("add-btn");
+            var btnMinus = document.getElementById("minus-btn");
+            var btnTimes = document.getElementById("times-btn");
+            var btnDivide = document.getElementById("divide-btn");
+            
+            //+
+            btnAdd.onclick = function(){
+                //全局变量如何设置
+                var first_number = parseFloat(document.getElementById("first-number").value);
+                var second_number = parseFloat(document.getElementById("second-number").value);
+                var re =first_number + second_number;
+                result.innerHTML = re;
+            }
+            // -
+            btnMinus.onclick = function(){
+                var first_number = parseFloat(document.getElementById("first-number").value);
+                var second_number = parseFloat(document.getElementById("second-number").value);
+                var re = first_number - second_number;
+                result.innerHTML = re;
+            }
+            //*
+            btnTimes.onclick = function(){
+                var first_number = parseFloat(document.getElementById("first-number").value);
+                var second_number = parseFloat(document.getElementById("second-number").value);
+                var re = first_number * second_number;
+                result.innerHTML = re;
+            }
+            //  /
+            btnDivide.addEventListener("click",function(){
+                //为什么js的代码容易理解
+                var first_number = parseFloat(document.getElementById("first-number").value);
+                var second_number = parseFloat(document.getElementById("second-number").value);
+                var re = first_number / second_number;
+                result.innerHTML = re;
+            })
+        }
+    </script>
+</body>
+</html>

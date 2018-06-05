@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>添加判断版计算器</title>
+</head>
+<body>        
+    <input id="first-number" type="text" value="0" placeholder="第一个数字">
+    <input id="second-number" type="text" value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <p id="tips"></p>
+    <script>
+        {   
+            
+            var result = document.getElementById("result");
+            var btnAdd = document.getElementById("add-btn");
+            var btnMinus = document.getElementById("minus-btn");
+            var btnTimes = document.getElementById("times-btn");
+            var btnDivide = document.getElementById("divide-btn");
+            
+            //+
+            btnAdd.onclick = function(){
+                //全局变量如何设置
+                var first_number = parseFloat(document.getElementById("first-number").value);
+                var second_number = parseFloat(document.getElementById("second-number").value);
+                if(isNum(first_number,second_number)){
+                    var re =first_number + second_number;
+                    result.innerHTML = re;
+                }
+                
+            }
+            // -
+            btnMinus.onclick = function(){
+                var first_number = parseFloat(document.getElementById("first-number").value);
+                var second_number = parseFloat(document.getElementById("second-number").value);
+
+                if(isNum(first_number,second_number)){
+                    var re = first_number - second_number;
+                    result.innerHTML = re;
+                }
+            }
+            //*
+            btnTimes.onclick = function(){
+                var first_number = parseFloat(document.getElementById("first-number").value);
+                var second_number = parseFloat(document.getElementById("second-number").value);
+                if((first_number<=0 || first_number>=10000)||(second_number<=0 ||second_number>=10000)){
+                    console.log('请输入1--10000之间的数字');
+                }else{
+                    if(isNum(first_number,second_number)){
+                        var re = first_number * second_number;
+                        result.innerHTML = re;
+                    }
+                }
+                
+            }
+            //  /
+            btnDivide.addEventListener("click",function(){
+                //为什么js的代码容易理解
+                var first_number = parseFloat(document.getElementById("first-number").value);
+                var second_number = parseFloat(document.getElementById("second-number").value);
+                if(second_number == 0){
+                    
+                    console.log('除数不能为0');
+                    
+                }else {
+                    if(isNum(first_number,second_number)){
+                        var re = first_number / second_number;
+                        result.innerHTML = re;
+                    }
+                }
+            })
+
+            function isNum(a,b){
+                var re;
+                if(isNaN(a) || isNaN(b)){
+                    console.log("请输入正确的数字。");
+                    //var tips = document.getElementById("tips");
+                    //tips.innerHTML = '<p>请输入正确的数字</p>';
+                    re = false;
+                }else{
+                    re = true;
+                }
+                return re;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <style>
+    td{
+        border: 1px solid black;
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 5px;
+    }
+    </style>
+    <body>
+
+        <script>
+        /*
+        小练习，练习使用循环实现一个九九乘法表
+
+        第一步，最低要求：在Console中按行输出 n * m = t
+        然后，尝试在网页中，使用table来实现一个九九乘法表
+        */
+        
+        var a,b,c;
+        document.write('<table>');
+            document.write('<th>99乘法表</th>');
+        for(var i = 1;i<=9;i++){
+            document.write('<tr>');
+            for(var j = 1; j<=i; j++){
+                console.log(i+'*'+j +'='+i * j);
+                document.write('<td>'+j+'*'+i +'='+i * j+'</td>');
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+
+        </script>
+    </body>
+</html>

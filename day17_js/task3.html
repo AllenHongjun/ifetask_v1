@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+    /*
+    3的小游戏，练习使用循环和条件语句，实现如下需求：
+
+    从1到100，以此在console输出各数字，但是，当数字为3的倍数或者含有3的时候，输出“PA”
+    比如：1,2,PA,4,5,PA,……,11,PA,PA,14,PA……
+    */
+    var a = 1;
+    do{
+        
+        if(parseInt(a % 3) == 0){
+            console.log('PA');
+            document.write('PA  <br>');
+        }else{
+            console.log(a);
+            document.write(a+'<br>');
+        }
+        a++;
+
+    }while(a < 100)
+    </script>
+</body>
+</html>

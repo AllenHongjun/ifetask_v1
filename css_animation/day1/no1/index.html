@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>第一天 制作一个简单的菜单动画效果</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>前端学院</h2>
+            <div id="line"></div>
+            <button id="btnDo"  value="切换样式">切换样式</button>
+        </div>
+        
+        <script>
+            var btnDo = document.getElementById("btnDo");
+            btnDo.onclick = function(){
+                var h2 = document.getElementsByTagName("h2")[0];
+                var line = document.getElementById("line");
+                h2.className +="ccolor";
+                line.className +="clength";
+                //如何实现重复点击 js还是要好好学呀
+                //按钮得边框如何去掉
+            }
+        </script>
+    </body>
+</html>

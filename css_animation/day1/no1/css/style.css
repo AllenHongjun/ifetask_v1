@@ -1,0 +1,76 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    font-size: 10px;
+}
+.container{
+    width:200px;
+    margin: 200px auto 0px;
+}
+
+.container h2{
+    width:200px;
+    text-align: center;
+    font-size: 3.4rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+     
+}
+
+
+
+@keyframes changeColor
+{
+    0% {color: #000;}
+    40% {color:rgba(16, 16, 156, 0.774)}
+    60% {color:rgba(16, 16, 156, 0.774)}
+    100%{color:#000;}
+}
+
+#line{
+    width: 0px;
+    height: 5px;
+    margin: 30px auto 0px;
+    background-color:  rgba(16, 16, 156, 0.774);
+    /* animation: cLength 2s;
+    -webkit-animation: cLength 2s;
+    -o-animation: cLength 2s;
+    -moz-animation: cLength 2s; */
+}
+
+
+@keyframes cLength{
+    0%{width:0px;}
+    40%{width:150px;}
+    60%{width:150px;}
+    100%{width:0px;}
+}
+/*改变颜色*/
+.ccolor{
+    animation: changeColor 1.5s;
+    -webkit-animation: changeColor 1.5s;
+    -moz-animation: changeColor 1.5s;
+    -o-animation: changeColor 1.5s;
+}
+
+/*改变长度*/
+.clength{
+    animation: cLength 1.5s;
+    -webkit-animation: cLength 1.5s;
+    -o-animation: cLength 1.5s;
+    -moz-animation: cLength 1.5s;
+}
+
+#btnDo{
+    font-size: 2.7rem;
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    display: block;
+    border: 1px solid rgba(12, 12, 12, 0.253);
+    margin: 70px auto 0px;
+    border-radius: 15px;
+}
+
+
